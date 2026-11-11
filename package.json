@@ -17,6 +17,11 @@
   },
   "icon": "./icon.svg",
   "main": "index.js",
+  "scripts": {
+    "test": "node test/smoke.cjs && node test/install-spec.cjs && node test/market-pr-spec.cjs",
+    "market:check": "node test/market-check.cjs",
+    "market:pr": "node scripts/market-pr.cjs"
+  },
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",

@@ -83,6 +83,30 @@ the composer to its stock behaviour; no other files are touched.
 - `engines.dsh` pins the tested host range. On an incompatible host the plugin
   manager reports the mismatch instead of loading it.
 
+## Submitting to the plugin market
+
+The entry that goes to [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)
+lives in `market/`. `scripts/market-pr.cjs` submits it without a browser and
+without the `gh` CLI: it runs the local gate (`test/market-check.cjs`), forks the
+list, branches the fork, commits `data/plugins/<file>.yml` verbatim and opens the
+pull request.
+
+```bash
+node scripts/market-pr.cjs --dry-run          # read-only: run the gate, print the plan
+node scripts/market-pr.cjs                    # fork + branch + PR, needs GH_TOKEN
+node scripts/market-pr.cjs --from-git-credential   # reuse the credential `git push` uses
+node scripts/market-pr.cjs --no-pr            # stage fork + branch + commit, no PR
+```
+
+It refuses to submit while the local gate is red — which includes the upstream
+rule that the plugin repository must be at least 24 hours old — and prints the
+exact time it becomes eligible. Without any credential, `--dry-run` still works
+and reads public data only; the manual route is to fork the list on the web and
+drop the yml from `market/` into `data/plugins/`.
+
+Re-running is idempotent: the fork is reused, and the branch is reset to a single
+commit carrying the current `market/` entry.
+
 ## License
 
 MIT
