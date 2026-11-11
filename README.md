@@ -42,12 +42,12 @@ dsh plugin --profile desktop add dsh-provider-model-switcher
 In **Add plugin → Install a third-party plugin**, paste either form:
 
 ```
-github:yangbingying/dsh-provider-model-switcher
-https://github.com/yangbingying/dsh-provider-model-switcher
+github:bingying-project/dsh-provider-model-switcher
+https://github.com/bingying-project/dsh-provider-model-switcher
 ```
 
 A bare `owner/repo` is **not** accepted — DSH reads it as a registry package
-name and rejects it. Pin a release with a fragment: `github:yangbingying/dsh-provider-model-switcher#v1.0.0`.
+name and rejects it. Pin a release with a fragment: `github:bingying-project/dsh-provider-model-switcher#v1.0.0`.
 
 **From a local tarball or checkout**
 

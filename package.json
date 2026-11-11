@@ -4,6 +4,14 @@
   "description": "Provider-first model switcher for the DSH composer: shows which provider owns the selected model and jumps straight to that provider's settings.",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bingying-project/dsh-provider-model-switcher.git"
+  },
+  "homepage": "https://github.com/bingying-project/dsh-provider-model-switcher#readme",
+  "bugs": {
+    "url": "https://github.com/bingying-project/dsh-provider-model-switcher/issues"
+  },
   "publishConfig": {
     "access": "public"
   },

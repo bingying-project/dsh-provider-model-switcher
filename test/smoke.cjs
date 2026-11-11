@@ -9,7 +9,11 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const bundlePath = path.join(__dirname, '..', 'client.js');
+// Defaults to the sibling checkout; pass a path to test an installed copy,
+// e.g. `node test/smoke.cjs node_modules/dsh-provider-model-switcher/client.js`.
+const bundlePath = process.argv[2]
+  ? path.resolve(process.argv[2])
+  : path.join(__dirname, '..', 'client.js');
 const source = fs.readFileSync(bundlePath, 'utf8');
 
 const ReactStub = {

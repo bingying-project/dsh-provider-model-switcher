@@ -39,7 +39,7 @@ function parseInstallSpec(raw) {
   return { kind: 'registry' };
 }
 
-const REPO = 'yangbingying/dsh-provider-model-switcher';
+const REPO = 'bingying-project/dsh-provider-model-switcher';
 const cases = [
   ['github:' + REPO, 'git'],
   ['github:' + REPO + '#v1.0.0', 'git'],
@@ -52,7 +52,7 @@ const cases = [
   ['https://gitee.com/' + REPO, 'git'],
   // Documented as rejected: a bare repository shorthand.
   [REPO, 'ERROR'],
-  ['https://github.com/yangbingying', 'ERROR'],
+  ['https://github.com/bingying-project', 'ERROR'],
   // For contrast: what a plain registry package looks like.
   ['dsh-provider-model-switcher', 'registry'],
   ['dsh-provider-model-switcher@1.0.0', 'registry'],
