@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Provider Model Switcher",
+    "description": "A provider-first model picker beside the composer: every configured provider is one row with its own edit shortcut into Settings, and the native model seat always names the provider that owns the selected model."
+  }
+}

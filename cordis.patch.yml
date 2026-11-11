@@ -1,0 +1,3 @@
+- insert:
+    - id: provider-model-switcher
+      name: 'dsh-provider-model-switcher'
