@@ -4,3 +4,4 @@ node_modules/
 *.bak-*
 .DS_Store
 Thumbs.db
+.workbuddy/

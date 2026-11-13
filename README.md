@@ -107,6 +107,15 @@ drop the yml from `market/` into `data/plugins/`.
 Re-running is idempotent: the fork is reused, and the branch is reset to a single
 commit carrying the current `market/` entry.
 
+### Storefront screenshots
+
+`screenshots.json` declares the images the market's plugin page shows. The site
+build reads it beside `package.json`, resolves the relative paths against this
+repository, and drops anything it cannot fetch — so a broken path degrades to
+"no screenshots" instead of failing. `node test/screenshots-spec.cjs` is the loud
+version of that check (shape, duplicates, dimensions, file size). What to capture
+and how is in [`assets/screenshots/README.md`](assets/screenshots/README.md).
+
 ## License
 
 MIT
